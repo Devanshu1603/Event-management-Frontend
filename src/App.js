@@ -1,0 +1,26 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import LoginPage from './components/auth/LoginPage';
+import SignupPage from './components/auth/SignupPage';
+import AdminDashboard from './pages/AdminDashboard/AdminDashboard';
+import UserDashboard from './pages/UserDashboard/UserDashboard';
+import UserProfile from './pages/UserProfile/UserProfile';
+import EventRegistration from './components/EventRegistration/EventRegistration';
+import './styles/App.css';
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignupPage />} />
+        <Route path="/admin/dashboard" element={<AdminDashboard />} />
+        <Route path="/user/dashboard" element={<UserDashboard />} />
+        <Route path="/" element={<Navigate to="/login" replace />} />
+        <Route path="/user/profile" element={<UserProfile />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;

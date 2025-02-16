@@ -1,0 +1,95 @@
+/* Background Blur Effect */
+.feedback-analysis-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark blur effect */
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Ensures it appears above other elements */
+  }
+  
+  /* Centered Feedback Container */
+  .feedback-analysis-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    z-index: 1000;
+  }
+  
+  /* Header Styling */
+  .feedback-header {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Feedback List */
+  .feedback-list {
+    list-style: none;
+    padding: 0;
+    max-height: 300px; /* Limits height */
+    overflow-y: auto; /* Enables scrolling */
+  }
+  
+  /* Individual Feedback Item */
+  .feedback-item {
+    background: #f9f9f9;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border-left: 5px solid #4f46e5;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .feedback-item:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Feedback Text */
+  .feedback-text {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  /* Rating */
+  .feedback-rating {
+    font-size: 14px;
+    font-weight: bold;
+    color: #4f46e5;
+    margin-top: 5px;
+  }
+  
+  /* Feedback Chart */
+  .feedback-charts-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  #bar-chart{
+    padding-left: 10px;
+  }
+  
+  /* Close Button */
+  .feedback-close-btn {
+    position: relative;
+    left: 95%;
+    top: 0;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+
+  

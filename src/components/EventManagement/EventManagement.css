@@ -1,0 +1,66 @@
+.managment-function-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+}
+
+.managment-function{
+      width: 24%;
+}
+
+.function-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    button{
+        border-radius: 5px;
+    }
+}
+
+.registration-filters input{
+    height: 40px;
+}
+
+.registration-filters select{
+    height: 40px;
+}
+
+.managment-icon{
+    margin-top: 2px;
+    margin-right: 10px;
+}
+
+button{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+button:active{
+    border: none;
+    outline: none;
+    offset: none;
+}
+
+button:focus{
+    border: 1px solid grey;
+    outline: none;
+    offset: none;
+}
+
+.btn-1{
+    background-color: #dbeafe;
+    color: #2563eb;
+}
+
+.btn-2{
+    background-color: #d1fae5;
+    color: #059669;
+}
+
+.btn-3{
+    background-color: #ede9fe;
+    color: #7c3aed;
+}
