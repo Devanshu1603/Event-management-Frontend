@@ -5,7 +5,11 @@ import EventRegistration from '../EventRegistration/EventRegistration';
 
 export default function EventDetails({ event, onClose, onRegister }) {
     const [showRegistration, setShowRegistration] = useState(false);
-    const statusClass = event.status === 'ongoing' ? 'status-ongoing' : 'status-upcoming';
+    const statusClass = event.status === 'ongoing'
+  ? 'status-ongoing'
+  : event.status === 'upcoming'
+  ? 'status-upcoming'
+  : 'status-completed';
     // const bkl = event._id;
     // console.log("bkl :- ", bkl);
 
@@ -43,7 +47,7 @@ export default function EventDetails({ event, onClose, onRegister }) {
                         <>
                             {/* Event Details */}
                             <div className="card-detail-title-container mb-3">
-                                <h3 className="card-detail-title">{event.title}</h3>
+                                <h3 className="card-detail-title gradient-text">{event.title}</h3>
                                 <span className={`event-status ${statusClass}`} style={{ height: '30px' }}>
                                     {event.status.charAt(0).toUpperCase() + event.status.slice(1)}
                                 </span>
@@ -52,21 +56,21 @@ export default function EventDetails({ event, onClose, onRegister }) {
                             <div className="grid grid-cols-2 mb-4">
                                 <div className="space-y-6">
                                     <div className="detail-item flex items-center text-gray-600 mb-2">
-                                        <Calendar className="detail-icon h-5 w-5 mr-2" />
+                                        <Calendar className="detail-icon h-5 w-5 mr-2 red-icon" />
                                         <span>{event.date}</span>
                                     </div>
                                     <div className="detail-item flex items-center text-gray-600 mb-2">
-                                        <Clock className="detail-icon h-5 w-5 mr-2" />
+                                        <Clock className="detail-icon h-5 w-5 mr-2 green-icon" />
                                         <span>{event.time}</span>
                                     </div>
                                 </div>
                                 <div className="space-y-2">
                                     <div className="detail-item flex items-center text-gray-600 mb-2">
-                                        <MapPin className="detail-icon h-5 w-5 mr-2" />
+                                        <MapPin className="detail-icon h-5 w-5 mr-2 blue-icon" />
                                         <span>{event.venue}</span>
                                     </div>
                                     <div className="detail-item flex items-center text-gray-600 mb-2">
-                                        <Users className="detail-icon h-5 w-5 mr-2" />
+                                        <Users className="detail-icon h-5 w-5 mr-2 yellow-icon" />
                                         <span>{event.registeredCount} / {event.capacity} registered</span>
                                     </div>
                                 </div>
@@ -96,11 +100,13 @@ export default function EventDetails({ event, onClose, onRegister }) {
                             </div>
 
                             <button
-                                onClick={() => setShowRegistration(true)}
-                                className="btn btn-primary bg-indigo-600 text-white py-3 px-4 rounded-md hover:bg-indigo-700 register-button d-flex align-items-center justify-content-center"
-                            >
-                                Register for Event
-                            </button>
+  onClick={() => setShowRegistration(true)}
+  className="btn text-white py-3 px-4 rounded-md register-button d-flex align-items-center justify-content-center"
+  disabled={event.status === 'ongoing' || event.status === 'completed'}
+>
+  Register for Event
+</button>
+
                         </>
                     )}
                 </div>

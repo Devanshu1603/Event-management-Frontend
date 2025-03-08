@@ -17,7 +17,8 @@
     transform: translate(-50%, -50%); /* Center the modal */
     width: 45%;
     height: 80%;
-    background-color: white;
+    background-color: #1e1e1e;
+    color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
@@ -49,6 +50,7 @@
 
   .register-button{
     width: 100%;
+    background-color: #7c4dff !important;
   }
 
   .card-detail-title-container{

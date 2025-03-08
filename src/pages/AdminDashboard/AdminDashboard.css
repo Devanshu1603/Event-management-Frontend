@@ -21,6 +21,10 @@
     text-align: center;
   }
 
+  .admindashboard-heading{
+    text-align: center !important;
+  }
+
   .event-configuration-options{
     display: flex;
     flex-direction: column;

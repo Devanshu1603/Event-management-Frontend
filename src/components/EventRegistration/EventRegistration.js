@@ -21,7 +21,7 @@ export default function EventRegistration({ eventId }) {
 
       // Send POST request to register for the event with name and email
       const response = await axios.post(
-        `http://localhost:5555/api/events/register/${eventId}`,
+        `https://event-management-backend-gamma.vercel.app/api/events/register/${eventId}`,
         { name, email },
         {
           headers: {

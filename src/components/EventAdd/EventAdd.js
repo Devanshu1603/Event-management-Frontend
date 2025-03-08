@@ -49,7 +49,7 @@ export default function UploadEventForm({ onClose }) {
       }
 
       // API request to create event
-      const response = await axios.post("http://localhost:5555/api/events/create", formData, {
+      const response = await axios.post("https://event-management-backend-gamma.vercel.app/api/events/create", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${token}`,
@@ -79,7 +79,7 @@ export default function UploadEventForm({ onClose }) {
     <div className="upload-event-overlay">
       <div className="upload-event-form">
         <div className="event-add-title">
-          <h5 className="text-primary">Post A New Event!</h5>
+          <h5 className="text-primary gradient-text">Post A New Event!</h5>
           <button className="close-btn" onClick={onClose}>✖</button>
         </div>
         <form onSubmit={handleSubmit}>

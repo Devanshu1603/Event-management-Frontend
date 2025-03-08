@@ -1,6 +1,5 @@
 .profile-container {
     min-height: 100vh;
-    background-color: #f3f4f6;
     padding: 20px;
   }
   
@@ -10,15 +9,46 @@
     max-width: 100wh;
     margin: auto;
   }
+
+  .edit-button-container{
+    display: flex;
+    justify-content: right;
+    padding: 20px;
+  }
+
+  .edit-icon-btn{
+    background-color: #1e1e1e;
+    color: #fff;
+    outline: none;
+    border: none;
+  }
+
+  .edit-icon-btn:active{
+    outline: none;
+    border: none;
+  }
+
+  .save-btn{
+    margin-top: 30px;
+    margin-left: 13px;
+    width: 94%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .welcome-section{
+    display: flex;
+    flex-direction: column;
+    width:70%;
+  }
   
-  .welcome-section {
-    background-color: #fff;
+  .welcome-section-part1 {
+    background-color: #1e1e1e;
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 20px;
-    width: 73%;
     height: 50%;
-    margin-left: 20px;
   }
   
   .welcome-text h2 {
@@ -38,6 +68,7 @@
   
   .btn {
     display: flex;
+    gap: 10px;
     align-items: center;
     padding: 10px 15px;
     border-radius: 6px;
@@ -94,19 +125,22 @@
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    max-width: 370px;
+    max-width: 400px;
+    width: 100%;
     height: 800px;
+    background-color: #1e1e1e;
   }
   
   .profile-header {
     height: 300px;
-    
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    background-color: #1e1e1e;
   }
   
-  
-  
   .profile-image {
-    width: 100%;
+    width: 300px;
     height: 300px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -149,6 +183,11 @@
     padding-right: 10px;
   }
 
+  .form-group label{
+    display: flex;
+    gap: 10px;
+  }
+
   .form-group-details{
     display: flex;
     justify-content: space-between;
@@ -164,13 +203,23 @@
     font-size: 14px;
   }
   
-  .icon {
+  .edit-icon{
+    z-index: 1000;
+    color: #fff;
+    /* padding: 10px;
+    border-radius: 50%;
+    position: relative;
+    right: 100px;
+    top: 70px; */
+  }
+
+  /* .icon {
     margin-right: 10px;
     width: 18px;
     height: 18px;
     position: relative;
     bottom: 8px;
-  }
+  } */
   
   .save-button {
     margin-top: 20px;
@@ -189,3 +238,88 @@
       margin-top: -70px;
     }
   }
+
+  /* Ensure form layout is clean */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group-details {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.form-group-details p,
+.form-group-details input {
+  width: 100%;
+  padding: 10px 40px 10px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: white;
+}
+
+.form-group-details input {
+  outline: none;
+}
+
+
+
+/* Styling for textarea */
+
+
+/* Button Styling */
+.btn.primary {
+  background-color: #5a50f0;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  width: fit-content;
+  margin-top: 10px;
+}
+
+.btn.primary .icon {
+  margin-right: 5px;
+}
+
+.btn.primary:hover {
+  background-color: #4940d3;
+}
+
+/* Fix Edit Button */
+
+
+.detail-icon{
+  height: 20px;
+  width: 20px;
+}
+
+.user-details-row{
+  background-color: #1e1e1e;
+  color: #fff;
+  height: 100vh;
+}

@@ -21,17 +21,19 @@ export default function AdminDashboard() {
     const fetchAdminEvents = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get("http://localhost:5555/api/events/my-events", {
+        const response = await axios.get("https://event-management-backend-gamma.vercel.app/api/events/my-events", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setEvents(response.data);
-        console.log("events",events);
+        console.log("admin events",events);
       } catch (error) {
         console.error("Error fetching admin events:", error);
       }
     };
     fetchAdminEvents();
   }, []);
+
+  
 
   const handleViewDetails = (eventId) => {
     const event = events.find((e) => e._id === eventId);
@@ -55,15 +57,15 @@ export default function AdminDashboard() {
     <div className="min-h-screen bg-gray-100">
       <div className="bg-indigo-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex justify-between items-center">
-            <h1 className="text-2xl font-bold">Admin Dashboard</h1>
-            <button
+          <div>
+            <h1 className="text-center gradient-text">Welcome Back To Admin Dashboard !</h1>
+            {/* <button
               onClick={handleLogout}
               className="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-indigo-600 bg-white hover:bg-indigo-50"
             >
               <LogOut className="h-5 w-5 mr-2" />
               Logout
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
@@ -71,7 +73,7 @@ export default function AdminDashboard() {
         <div className="grid grid-cols-1 gap-8">
           <EventManagement />
         </div>
-        <h2 className="admin-event-conatiner-heading text-xl font-semibold mb-4">Your Events</h2>
+        <h2 className="admin-event-conatiner-heading text-xl font-semibold mb-4 gradient-text">Your Events</h2>
         {events.length === 0 ? (
           <p>No events posted yet.</p>
         ) : (

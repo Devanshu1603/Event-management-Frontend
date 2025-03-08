@@ -13,7 +13,7 @@ export default function EmailTemplete({ onClose }) {
   useEffect(() => {
     const fetchEmailTemplates = async () => {
       try {
-        const response = await axios.get('http://localhost:5555/api/email-templates');
+        const response = await axios.get('https://event-management-backend-gamma.vercel.app/api/email-templates');
         setTemplates(response.data); // Set initial templates from the database
       } catch (error) {
         console.error('Error fetching email templates:', error);
@@ -31,7 +31,7 @@ export default function EmailTemplete({ onClose }) {
 
   const handleSave = async () => {
     try {
-      await axios.put('http://localhost:5555/api/email-templates', templates); // Save updated templates to the backend
+      await axios.put('https://event-management-backend-gamma.vercel.app/api/email-templates', templates); // Save updated templates to the backend
       alert('Email Templates Updated Successfully!');
     } catch (error) {
       console.error('Error saving email templates:', error);
@@ -43,7 +43,7 @@ export default function EmailTemplete({ onClose }) {
     <div className="email-templates-overlay">
       <div className="email-templates-form">
         <button className="close-btn" onClick={onClose}>✖</button>
-        <h3>Email Templates</h3>
+        <h3 className='gradient-text'>Email Templates</h3>
 
         <div className="template-section">
           <label>Registration Confirmation</label>

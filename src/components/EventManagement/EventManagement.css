@@ -1,3 +1,8 @@
+.event-management-container{
+    background-color: #1e1e1e00;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
 .managment-function-container{
     display: flex;
     flex-wrap: wrap;
@@ -7,6 +12,7 @@
 
 .managment-function{
       width: 24%;
+      border-color: #7c4dffac !important;
 }
 
 .function-container{
@@ -51,16 +57,16 @@ button:focus{
 }
 
 .btn-1{
-    background-color: #dbeafe;
+    background-color: #1e1e1e;
     color: #2563eb;
 }
 
 .btn-2{
-    background-color: #d1fae5;
+    background-color: #1e1e1e;
     color: #059669;
 }
 
 .btn-3{
-    background-color: #ede9fe;
+    background-color: #1e1e1e;
     color: #7c3aed;
 }

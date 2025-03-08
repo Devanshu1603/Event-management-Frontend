@@ -15,14 +15,14 @@ export default function EventManagement() {
   const [showRegistration, setShowRegistration] = useState(false);
 
   return (
-    <div className="bg-white rounded-lg shadow-md p-6">
-      <h2 className="text-2xl font-semibold mb-6">Event Management</h2>
+    <div className=" event-management-container rounded-lg shadow-md p-6">
+      <h2 className="text-2xl font-semibold mb-6 gradient-text">Event Management</h2>
       
       <div className="managment-function-container">
         <div className="managment-function p-4 border rounded-lg">
           <div className="flex items-center space-x-2 mb-4">
-            <Calendar className="managment-icon h-6 w-6 text-indigo-600" />
-            <h4 className="text-lg font-medium">Event Configuration</h4>
+            <Calendar className="managment-icon h-6 w-6 text-indigo-600" style={{ color:'#7c4dff'}}/>
+            <h4 className="text-lg font-medium gradient-text">Event Configuration</h4>
           </div>
           <div className="function-container space-y-4">
           <button
@@ -62,16 +62,16 @@ export default function EventManagement() {
 
         <div className="managment-function p-4 border rounded-lg">
           <div className="flex items-center space-x-2 mb-4">
-            <Settings className="managment-icon h-6 w-6 text-indigo-600" />
-            <h4 className="text-lg font-medium">System Settings</h4>
+            <Settings className="managment-icon h-6 w-6 text-indigo-600" style={{ color:'#7c4dff'}} />
+            <h4 className="text-lg font-medium gradient-text">System Settings</h4>
           </div>
           <div className="function-container space-y-4">
-            <button className="btn-3 w-full text-left px-4 py-2 bg-gray-50 rounded-md hover:bg-gray-100"
+            <button className="btn-2 w-full text-left px-4 py-2 bg-gray-50 rounded-md hover:bg-gray-100"
             onClick={() => setShowEmailTemplates(true)}
             >
               Email Templates
             </button>
-            <button className="btn-2 w-full text-left px-4 py-2 bg-gray-50 rounded-md hover:bg-gray-100">
+            <button className="btn-3 w-full text-left px-4 py-2 bg-gray-50 rounded-md hover:bg-gray-100">
               Notification Settings
             </button>
             <button className="btn-1 w-full text-left px-4 py-2 bg-gray-50 rounded-md hover:bg-gray-100">

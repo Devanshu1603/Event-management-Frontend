@@ -11,7 +11,8 @@
   }
   
   .email-templates-form {
-    background: white;
+    background: #1e1e1e;
+    color: #fff;
     padding: 20px;
     width: 450px;
     border-radius: 10px;
@@ -50,6 +51,7 @@
   
   textarea {
     width: 100%;
+    color: #fff;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;

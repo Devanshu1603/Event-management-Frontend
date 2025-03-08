@@ -21,7 +21,7 @@ export default function UserDashboard() {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await fetch("http://localhost:5555/api/events");
+        const response = await fetch("https://event-management-backend-gamma.vercel.app/api/events");
         const data = await response.json();
         setEvents(data);
       } catch (error) {
@@ -46,7 +46,7 @@ export default function UserDashboard() {
 
   const ongoingEvents = filteredEvents.filter(event => event.status === 'ongoing');
   const upcomingEvents = filteredEvents.filter(event => event.status === 'upcoming');
-
+  const completedEvents = filteredEvents.filter(event => event.status === 'completed');
    // ✅ Open Scanner or File Upload
    const handleAttendEvent = (eventId) => {
     const event = events.find(e => e._id === eventId);
@@ -65,7 +65,7 @@ export default function UserDashboard() {
       setScanning(false);
 
       try {
-        const response = await fetch("http://localhost:5555/api/events/mark-attendance", {
+        const response = await fetch("https://event-management-backend-gamma.vercel.app/api/events/mark-attendance", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -125,7 +125,7 @@ export default function UserDashboard() {
 
   return (
     <div className="main-container">
-      <div className="bg-indigo-600 text-white">
+      {/* <div className="bg-indigo-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-4">
@@ -146,7 +146,7 @@ export default function UserDashboard() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <main>
         {/* Search Bar */}
@@ -160,7 +160,7 @@ export default function UserDashboard() {
               placeholder="Search events..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="search-bar border border-gray-300"
+              className="search-bar"
             />
           </div>
         </div>
@@ -168,8 +168,8 @@ export default function UserDashboard() {
         {/* Ongoing Events (Show Attend Button) */}
         {ongoingEvents.length > 0 && (
           <div className="mb-8">
-            <h2 className="text-xl font-bold text-gray-900 mb-4">Ongoing Events</h2>
-            <div className="card-container gap-6">
+            <h2 className="text-xl font-bold text-gray-900 mb-4 gradient-text">Ongoing Events</h2>
+            <div className="card-container">
               {ongoingEvents.map(event => (
                 <EventCard
                   key={event._id}
@@ -196,9 +196,36 @@ export default function UserDashboard() {
         {/* Upcoming Events (Show View Details Button) */}
         {upcomingEvents.length > 0 && (
           <div>
-            <h2 className="text-xl font-bold text-gray-900 mb-4">Upcoming Events</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-4 gradient-text">Upcoming Events</h2>
             <div className="card-container gap-6">
               {upcomingEvents.map(event => (
+                <EventCard
+                  key={event._id}
+                  event={{
+                    id: event._id,
+                    title: event.title,
+                    image: event.posterImg,
+                    status: event.status,
+                    date: event.date,
+                    time: event.time,
+                    location: event.venue,
+                    registeredCount: event.registrations,
+                    capacity: event.capacity,
+                    description: event.description,
+                  }}
+                  onViewDetails={handleViewDetails}
+                  userRole="user"
+                />
+              ))}
+            </div>
+          </div>
+        )}
+
+{completedEvents.length > 0 && (
+          <div>
+            <h2 className="text-xl font-bold text-gray-900 mb-4 gradient-text">Recent Events</h2>
+            <div className="card-container gap-6">
+              {completedEvents.map(event => (
                 <EventCard
                   key={event._id}
                   event={{
