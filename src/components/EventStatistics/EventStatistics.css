@@ -13,7 +13,8 @@
   }
   
   .statistics-dashboard {
-    background: white;
+    background: #1e1e1e;
+    color: #fff;
     padding: 20px;
     width: 600px; /* Increased width */
     border-radius: 10px;
@@ -43,7 +44,8 @@
   }
   
   .stat-card {
-    background: #f3f4f6;
+    background: #1e1e1e;
+    border: 1px solid #7c4dff !important;
     padding: 15px;
     border-radius: 8px;
     text-align: center;
@@ -64,3 +66,8 @@
     margin-bottom: 20px;
   }
   
+  @media (max-width: 540px) {
+    .statistics-dashboard{
+      width: 90%;
+    }
+  }

@@ -18,9 +18,9 @@ useEffect(() => {
             <div class="ro">
                 <div class="col-lg-6 offset-lg-3">
                     <div class="contact-content text-center">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum </p>
+                        <p>🚀 Your Go-To Event Management Platform<br></br>Simplifying event creation, management, and participation for users and organizers. Join us today and experience seamless event management !</p>
                         <div class="hr"></div>
-                        <h6>1120 Lorem ipsum dolor sit amet, KC 179050, Chandigarh.</h6>
+                        <h6>Follow us on social media for updates on upcoming events and new features.</h6>
                         <h6>+01 2345 6789 12<span>|</span>+01 2345 6789 12</h6>
                         <div class="contact-social">
                             <ul>
@@ -35,7 +35,8 @@ useEffect(() => {
         </div>
     </section>
     <footer>
-        <p>Copyright &copy; 2019 <img src="https://i.ibb.co/QDy827D/ak-logo.png" alt="logo"/> All Rights Reserved.</p>
+        <p>Copyright &copy; 2025  <Vote className="icon-blue me-2" />
+                  <span className="fw-bold text-light">PLANOVA</span> All Rights Reserved.</p>
     </footer>
     </div>
     

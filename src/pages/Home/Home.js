@@ -14,7 +14,7 @@ export default function Home() {
   const [isTypingComplete, setIsTypingComplete] = useState(false);
   const [userRole, setUserRole] = useState(null); // State to store user role
 
-  const fullText = "Welcome to our Event Management Platform.";
+  const fullText = "Welcome to Planova , our Event Management Platform.";
 
   useEffect(() => {
     // Simulate fetching user role (replace this with actual API call or localStorage retrieval)
@@ -48,7 +48,7 @@ export default function Home() {
                 {typedText}
                 {!isTypingComplete && <span className="cursor"></span>}
               </p>
-              <p className="mb-4 text-white">
+              <p className="home-des mb-4 text-white">
                 Whether Attending or Organizing! Your premier partner in crafting exceptional event experiences that leave lasting impressions. Join us today and experience a smarter way to manage and participate in events! 🚀✨
               </p>
               <div className="d-flex mb-5 hero-btns">
@@ -93,7 +93,7 @@ export default function Home() {
                 {typedText}
                 {!isTypingComplete && <span className="cursor"></span>}
               </p>
-              <p className="mb-4 text-white">
+              <p className="home-des mb-4 text-white">
                 Whether Attending or Organizing! Your premier partner in crafting exceptional event experiences that leave lasting impressions. Join us today and experience a smarter way to manage and participate in events! 🚀✨
               </p>
               <div className="d-flex mb-5 hero-btns">

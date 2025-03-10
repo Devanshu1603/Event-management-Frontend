@@ -12,10 +12,16 @@
     justify-content: center;
     z-index: 1000; /* Ensures it appears above other elements */
   }
+
+  .export-btn{
+    background-color: #1e1e1e;
+    color: #fff;
+  }
   
   /* Centered Feedback Container */
   .feedback-analysis-container {
-    background: rgba(255, 255, 255, 0.95);
+    background: #1e1e1e;
+    color: #fff;
     padding: 25px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -82,6 +88,7 @@
   
   /* Close Button */
   .feedback-close-btn {
+    color: #fff;
     position: relative;
     left: 95%;
     top: 0;

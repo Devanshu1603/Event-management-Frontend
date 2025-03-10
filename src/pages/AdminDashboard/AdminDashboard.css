@@ -13,12 +13,16 @@
   }
   
   .admin-event-management-container {
-    background: rgba(255, 255, 255, 0.95);
+    background: #1e1e1e;
     padding: 20px;
     border-radius: 10px;
-    width: 30%;
-    max-width: 800px;
+    width: 330px;
+    height: auto;
     text-align: center;
+  }
+
+  .admin-event-management-btn{
+    border: 1px solid #7c4dff !important;
   }
 
   .admindashboard-heading{
@@ -44,12 +48,13 @@
 
   .admin-event-management-close-btn {
     position: relative;
-    left: 70px;
+    left: 20px;
     bottom: 10px;
     background: none;
     border: none;
     font-size: 20px;
     cursor: pointer;
+    color: #fff;
   }
 
   .admin-events{

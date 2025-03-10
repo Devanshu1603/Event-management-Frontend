@@ -13,7 +13,8 @@
   }
   
   .manage-registration-container {
-    background: rgba(255, 255, 255, 0.95);
+    background: #1e1e1e;
+    color: #fff;
     padding: 20px;
     border-radius: 10px;
     width: 80%;
@@ -27,17 +28,18 @@
   }
   
 
-  .event-cardr{
+  /* .event-cardr{
     width: 240px;
     cursor: pointer;
     padding-top: 20px;
     padding-bottom: 10px;
     border: 2px solid rgba(0, 0, 0, 0.4);
     border-radius: 5px;
-  }
+  } */
 
   .manageRegistration-close-btn {
     position: relative;
+    color: #fff;
     bottom: 5px;
     left: 245px;
     background: none;
@@ -58,18 +60,18 @@
   .registration-table th,
   .registration-table td {
     padding: 12px 16px;
-    border: 1px solid #ddd;
+    border: 1px solid #7c4dff;
     text-align: left;
   }
   
   .registration-table thead {
-    background-color: #f4f4f4;
+    background-color: #1e1e1e;
     font-size: 18px;
     font-weight: bold;
   }
   
   .registration-table tbody tr:hover {
-    background-color: #f9f9f9;
+    background-color: #1e1e1e;
   }
   
   .status {
@@ -117,3 +119,27 @@
     background-color: darkred;
   }
   
+  @media (max-width: 540px) {
+  
+    .registration-table thead, tr, tbody {
+      font-size: 12px;
+    }
+
+    
+
+    .registration-table tbody tr{
+      font-size: 12px;
+    }
+  }
+
+  @media (max-width: 850px){
+
+    .manage-registration-container {
+      overflow-x: auto; /* Enable horizontal scrolling */
+      width: 90%;
+    }
+  
+    .registration-table {
+      min-width: 600px; /* Ensure the table does not shrink */
+    }
+  }

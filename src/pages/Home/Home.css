@@ -4,6 +4,10 @@
     height: auto;
 }
 
+.home-des{
+  width: 90%;
+}
+
 
 /* .hero-img{
     margin-top: 50px;
@@ -73,10 +77,23 @@
     background-color: #7c4dff;
   }
 
+  @media (max-width: 1000px) {
+    .hero-description{
+      margin: 0;
+      padding: 0;
+    }
+
+    .hero-img{
+      display: none;
+    }
+  }
+
   @media (max-width: 540px) {
+    
     .hero-description{
       padding: 15px;
       margin: 0;
+      height: 500px;
     }
     .hero-img{
       display: none;

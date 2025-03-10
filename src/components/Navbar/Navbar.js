@@ -33,7 +33,7 @@ const CustomNavbar = () => {
         {/* Brand Logo */}
         <Navbar.Brand as={Link} to="/home" className="d-flex align-items-center">
           <Vote className="icon-blue me-2" />
-          <span className="fw-bold text-light">VoteVerify</span>
+          <span className="fw-bold text-light">PLANOVA</span>
         </Navbar.Brand>
 
         {/* Navbar Toggle for Mobile */}

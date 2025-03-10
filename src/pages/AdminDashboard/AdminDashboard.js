@@ -77,7 +77,7 @@ export default function AdminDashboard() {
         {events.length === 0 ? (
           <p>No events posted yet.</p>
         ) : (
-          <div className="admin-events">
+          <div className="card-container">
             {events.map((event) => (
               <EventCard
                 key={event._id}
@@ -104,25 +104,25 @@ export default function AdminDashboard() {
           <div className="admin-event-management-overlay">
             <div className="admin-event-management-container">
               <div className="admin-event-management-heading">
-                <h3 className="text-xl font-semibold mb-4">Event Configuration</h3>
+                <h3 className="text-xl font-semibold mb-4 gradient-text">Event Configuration</h3>
                 <button className="admin-event-management-close-btn" onClick={handleCloseDetails}>✖</button>
               </div>
               <div className="event-configuration-options">
                 <button
                   onClick={() => setShowRegistration(true)}
-                  className="btn-1 w-full px-4 py-2 bg-gray-50 rounded-md hover:bg-gray-100"
+                  className="btn-1 w-full px-4 py-2 mb-2 admin-event-management-btn"
                 >
                   Manage Registration
                 </button>
                 <button
                   onClick={() => setShowStatistics(true)}
-                  className="btn-2 w-full px-4 py-2 bg-gray-50 rounded-md hover:bg-gray-100"
+                  className="btn-2 w-full px-4 py-2 mb-2 admin-event-management-btn"
                 >
                   Event Statistics
                 </button>
                 <button
                   onClick={() => setShowFeedback(true)}
-                  className="btn-3 w-full px-4 py-2 bg-gray-50 rounded-md hover:bg-gray-100"
+                  className="btn-3 w-full px-4 py-2 admin-event-management-btn"
                 >
                   Feedback Analysis
                 </button>

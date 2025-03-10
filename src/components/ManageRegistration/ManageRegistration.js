@@ -6,7 +6,7 @@ const RegisteredUsers = ({ eventId, onClose}) => {
 
   useEffect(() => {
     // Fetch registered users when the component mounts
-    fetch(`http://localhost:5555/api/events/registrations/${eventId}`, {
+    fetch(`https://event-management-backend-gamma.vercel.app/api/events/registrations/${eventId}`, {
       method: "GET",
       headers: {
         "Authorization": `Bearer ${localStorage.getItem("token")}`, // JWT token
@@ -28,7 +28,7 @@ const RegisteredUsers = ({ eventId, onClose}) => {
 
 
   const updateStatus = (email, newStatus) => {
-    fetch(`http://localhost:5555/api/events/registration/${eventId}/${email}`, {
+    fetch(`https://event-management-backend-gamma.vercel.app/api/events/registration/${eventId}/${email}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -62,7 +62,7 @@ const RegisteredUsers = ({ eventId, onClose}) => {
     <div className="registration-overlay">
     <div className="manage-registration-container">
     <div className="manage-registration-title">
-          <h2 className="mb-2">Registered Users</h2>
+          <h2 className="mb-2 gradient-text">Registered Users</h2>
           <button className="manageRegistration-close-btn" onClick={onClose}>✖</button>
           </div>
       {error && <p>{error}</p>}

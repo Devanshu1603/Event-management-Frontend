@@ -62,6 +62,53 @@ export default function UserProfile() {
     fetchUserData();
   }, [navigate]);
 
+  const handleSave = async (e) => {
+    e.preventDefault();
+    try {
+      const token = localStorage.getItem('token');
+      if (!token) {
+        alert("No authentication token found");
+        return;
+      }
+  
+      const formData = new FormData();
+      if (userDetails.name) formData.append('name', userDetails.name);
+      if (userDetails.email) formData.append('email', userDetails.email);
+      if (userDetails.phone) formData.append('phone', userDetails.phone);
+      if (userDetails.address) formData.append('address', userDetails.address);
+      if (userDetails.bio) formData.append('bio', userDetails.bio);
+  
+      if (selectedImage) {
+        formData.append('profileImage', selectedImage);
+      }
+  
+      console.log("Sending form data:", [...formData.entries()]);
+  
+      try {
+        const response = await fetch("https://event-management-backend-gamma.vercel.app/api/user/profile", {
+          method: "PUT",
+          headers: {
+            Authorization: `Bearer ${token}`, // If you use authentication
+          },
+          body: formData, // ✅ Sending FormData instead of JSON
+        });
+    
+        const data = await response.json();
+        if (response.ok) {
+          alert("Profile updated successfully!");
+          setIsEditing(false); 
+        } else {
+          alert("Update failed:", data);
+        }
+      } catch (error) {
+        console.error("Error updating profile:", error);
+      }
+    } catch (error) {
+      console.error('Error updating profile:', error.response ? error.response.data : error.message);
+    }
+  };
+  
+
   const handleViewDetails = (eventId) => {
     const event = registeredEvents.find(e => e._id === eventId);
     if (event) setSelectedEvent(event);
@@ -116,6 +163,7 @@ export default function UserProfile() {
                 value={userDetails.name}
                 className="input-field"
                 disabled={!isEditing}
+                onChange={(e) => setUserDetails({ ...userDetails, name: e.target.value })}
               />
             </div>
 
@@ -126,6 +174,8 @@ export default function UserProfile() {
                 value={userDetails.email}
                 className="input-field"
                 disabled={!isEditing}
+                onChange={(e) => setUserDetails({ ...userDetails, email: e.target.value })}
+
               />
             </div>
 
@@ -136,6 +186,8 @@ export default function UserProfile() {
                 value={userDetails.phone}
                 className="input-field"
                 disabled={!isEditing}
+                onChange={(e) => setUserDetails({ ...userDetails, phone: e.target.value })}
+
               />
             </div>
 
@@ -146,17 +198,29 @@ export default function UserProfile() {
                 value={userDetails.address}
                 className="input-field"
                 disabled={!isEditing}
+                onChange={(e) => setUserDetails({ ...userDetails, address: e.target.value })}
+
               />
             </div>
-            <div className="form-group">
+            <div className="form-group mb-4">
               <label><MapPin className="yellow-icon detail-icon" />Bio</label>
               <input
                 type="text"
                 value={userDetails.bio}
                 className="input-field"
                 disabled={!isEditing}
+                onChange={(e) => setUserDetails({ ...userDetails, bio: e.target.value })}
+
               />
             </div>
+             {/* Save Button */}
+             {isEditing && (
+                <div className="button-container">
+                  <button type="submit" className="btn save-btn" onClick={handleSave}>
+                    <Save className="icon" /> Save Changes
+                  </button>
+                </div>
+              )}
           </form>
         </div>
 
@@ -199,7 +263,7 @@ export default function UserProfile() {
           <div className="welcome-section-part2">
             <h3 className='gradient-text'>My Registered Events</h3>
             {registeredEvents.length > 0 ? (
-              <ul className="event-list">
+              <div className="card-container">
                 {registeredEvents.map((event) => (
                   <EventCard
                     key={event._id}
@@ -228,7 +292,7 @@ export default function UserProfile() {
                   />
                 )}
 
-              </ul>
+              </div>
             ) : (
               <p>No registered events yet.</p>
             )}

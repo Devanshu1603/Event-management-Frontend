@@ -37,7 +37,7 @@ export default function EventFeedback({ onClose}) {
     <div className="feedback-analysis-overlay">
          <div className="feedback-analysis-container">
          <button className="feedback-close-btn" onClick={onClose}>✖</button>  
-      <h2 className="feedback-header">Feedback Analysis</h2>
+      <h2 className="feedback-header gradient-text">Feedback Analysis</h2>
       
       {/* Feedback List */}
       {/* <div className="feedback-list">

@@ -10,9 +10,6 @@
     --icon-venue: #00cc88;
   }
 
-  .service-card-container{
-    padding-left: 50px;
-  }
 
 .service-card{
     background-color: hsl(0, 0%, 12%) !important;
