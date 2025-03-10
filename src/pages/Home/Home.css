@@ -89,11 +89,15 @@
   }
 
   @media (max-width: 540px) {
+
+    .hero-section{
+      height: 450px;
+    }
     
     .hero-description{
       padding: 15px;
       margin: 0;
-      height: 500px;
+      height: 450px;
     }
     .hero-img{
       display: none;
