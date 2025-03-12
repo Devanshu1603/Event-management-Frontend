@@ -55,8 +55,8 @@ export default function AdminDashboard() {
 
   return (
     <div className="min-h-screen bg-gray-100">
-      <div className="bg-indigo-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <div className="bg-indigo-600 text-white" >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4" >
           <div>
             <h1 className="text-center gradient-text">Welcome Back To Admin Dashboard !</h1>
             {/* <button
@@ -69,8 +69,8 @@ export default function AdminDashboard() {
           </div>
         </div>
       </div>
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid grid-cols-1 gap-8">
+      <main>
+        <div className="admin-event-management-functions-conatiner">
           <EventManagement />
         </div>
         <h2 className="admin-event-conatiner-heading text-xl font-semibold mb-4 gradient-text">Your Events</h2>

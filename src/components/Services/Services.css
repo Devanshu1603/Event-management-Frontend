@@ -10,6 +10,10 @@
     --icon-venue: #00cc88;
   }
 
+  .service-detail-des{
+    font-size: 14px;
+  }
+
 
 .service-card{
     background-color: hsl(0, 0%, 12%) !important;

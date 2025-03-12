@@ -15,12 +15,34 @@
   color: #ffffff4c;
 }
 
-.user-icon{
+.User-icon{
   color:#7c4dff;  
 }
 
 @media (max-width: 540px) {
   .signup-container{
-      width: 90% !important;
+    font-size: 12px;
+    width: 90% !important;
+}
+
+.signup-container form input, select{
+    font-size: 13px !important;
+}
+
+.user-icon{
+    position: absolute;
+    top: 36.5% !important;
+}
+}
+
+@media (max-width: 405px) {
+
+  .signup-heading{
+      font-size: 17px !important;
+  }
+
+  .signup-user-icon{
+      position: absolute;
+      top: 35% !important;
   }
 }

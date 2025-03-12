@@ -35,7 +35,6 @@ function MainLayout() {
         <Route path="/user/profile" element={<UserProfile />} />
         <Route path="/home" element={<Home />} />
         <Route path="/LandingPage" element={<LandingPage />} />
-
       </Routes>
     </>
   );

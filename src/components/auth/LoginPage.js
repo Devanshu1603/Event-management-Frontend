@@ -45,14 +45,14 @@ export default function LoginPage() {
           <div className="flex-center mb-2">
             <Lock className="lock-icon" size={40} />
           </div>
-          <h2 className="text-center mb-4 gradient-text" style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>
+          <h2 className="text-center mb-4 login-heading gradient-text" style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>
             Sign in to your account
           </h2>
           <form onSubmit={handleSubmit}>
 
             <div className='mb-2'>
               <label className="label">Role</label>
-              <User className="text-gray" style={{ position: 'absolute', left: '50px', top: '37.5%', transform: 'translateY(-49%)', color:"#7c4dff" }} size={18} />
+              <User className="text-gray user-icon" style={{ position: 'absolute', left: '50px', top: '37.5%', transform: 'translateY(-49%)', color:"#7c4dff" }} size={18} />
               <select
                 value={role}
                 onChange={(e) => setRole(e.target.value)}
@@ -115,11 +115,12 @@ export default function LoginPage() {
           </form>
 
           <div className="mt-4 text-center">
-            <p className="text-gray text-sm flex-center">
-              Don't have an account?{' '}
+            <p className="text-gray text-sm flex-center" style={{ fontSize: '0.875rem' }}>
+              Don't have an account ? {' '}
               <button
+              className='signup-btn'
                 onClick={() => navigate('/signup')}
-                style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: '14px', color:"#7c4dff", position:"relative", top:'1px', left:'2px' }}
+                style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: '14px', color:"#7c4dff", position:"relative", left:'2px' }}
               >
                 Sign up
               </button>

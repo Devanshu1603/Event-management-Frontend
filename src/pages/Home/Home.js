@@ -78,7 +78,6 @@ export default function Home() {
           <div className="footer-cont">
             <Footer />
           </div>
-        {/* <AdminDashboard /> */}
         </>
       ) : (
         <>

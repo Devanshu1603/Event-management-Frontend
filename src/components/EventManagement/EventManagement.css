@@ -70,3 +70,10 @@ button:focus{
     background-color: #1e1e1e;
     color: #7c3aed;
 }
+
+@media (max-width: 540px) {
+    .event-management-container{
+        padding: 0 !important;
+        text-align: center;
+    }
+}

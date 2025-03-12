@@ -45,15 +45,15 @@ export default function SignupPage() {
       <div className="flex-center" style={{ position:'relative', top:'100px' }}>
         <div className="signup-container card p-6" style={{ maxWidth: '450px', width: '100%', maxHeight: '530px', padding: '40px' }}>
           <div className="flex-center mb-2">
-            <User className="user-icon" size={35} />
+            <User className="User-icon" size={35} />
           </div>
-          <h2 className="text-center mb-4 gradient-text" style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>
+          <h2 className="text-center mb-4 gradient-text signup-heading" style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>
             Create your account
           </h2>
           <form onSubmit={handleSubmit}>
             <div className='mb-2'>
               <label className="label">Role</label>
-              <User className="text-gray" style={{ position: 'absolute', left: '50px', top: '36%', transform: 'translateY(-49%)', color:"#7c4dff" }} size={18} />
+              <User className="text-gray signup-user-icon" style={{ position: 'absolute', left: '50px', top: '36%', transform: 'translateY(-49%)', color:"#7c4dff" }} size={18} />
               <select className='options' value={role} onChange={(e) => setRole(e.target.value)} style={{ height: '35px', padding:'4px'}}>
                 <option value="user">User</option>
                 <option value="admin">Admin</option>
@@ -125,8 +125,8 @@ export default function SignupPage() {
           </form>
           <div className="mt-3 text-center">
             <p className="text-gray flex-center" style={{ fontSize: '0.875rem' }}>
-              Already have an account?{' '}
-              <button onClick={() => navigate('/login')} className="text-primary" style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: '0.875rem', position: "relative", top: '1px', left: '2px' }}>
+              Already have an account ?{' '}
+              <button onClick={() => navigate('/login')} className="signup-btn" style={{ background: 'none', border: 'none', cursor: 'pointer', color:"#7c4dff", fontSize: '0.875rem', position: "relative", top: '1px', left: '2px' }}>
                 Sign in
               </button>
             </p>

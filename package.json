@@ -8,6 +8,7 @@
     "chart.js": "^4.4.8",
     "cra-template": "1.2.0",
     "file-saver": "^2.0.5",
+    "framer-motion": "^12.5.0",
     "jsqr": "^1.4.0",
     "lucide-react": "^0.474.0",
     "qr-scanner": "^1.4.2",

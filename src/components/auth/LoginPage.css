@@ -13,6 +13,7 @@ input, select{
     color: #fff;
 }
 
+
 .lock-icon{
     color:#7c4dff;  
 }
@@ -31,6 +32,34 @@ input, select{
 
 @media (max-width: 540px) {
     .login-container{
+        font-size: 12px;
         width: 90% !important;
+    }
+
+
+
+    .login-container form input, select{
+        font-size: 13px;
+    }
+
+    .user-icon{
+        position: absolute;
+        top: 36.5% !important;
+    }
+}
+
+@media (max-width: 405px) {
+
+    .login-heading{
+        font-size: 17px !important;
+    }
+
+    /* .signup-btn{
+        font-size: 12px !important;
+    } */
+
+    .user-icon{
+        position: absolute;
+        top: 35% !important;
     }
 }

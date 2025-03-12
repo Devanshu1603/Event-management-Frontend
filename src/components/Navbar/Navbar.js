@@ -31,7 +31,7 @@ const CustomNavbar = () => {
     <Navbar expand="lg" variant="dark" className="shadow-custom">
       <Container>
         {/* Brand Logo */}
-        <Navbar.Brand as={Link} to="/home" className="d-flex align-items-center">
+        <Navbar.Brand as={Link} to="/home" className="d-flex align-items-center nav-heading">
           <Vote className="icon-blue me-2" />
           <span className="fw-bold text-light">PLANOVA</span>
         </Navbar.Brand>

@@ -21,7 +21,7 @@ useEffect(() => {
                         <p>🚀 Your Go-To Event Management Platform<br></br>Simplifying event creation, management, and participation for users and organizers. Join us today and experience seamless event management !</p>
                         <div class="hr"></div>
                         <h6>Follow us on social media for updates on upcoming events and new features.</h6>
-                        <h6>+01 2345 6789 12<span>|</span>+01 2345 6789 12</h6>
+                        <h6>+92 9798 8308 05<span>|</span>console.uk123@gmail.com</h6>
                         <div class="contact-social">
                             <ul>
                                 <li><Link to="/Home"><Home className='yellow-icon'/>Home</Link></li>
