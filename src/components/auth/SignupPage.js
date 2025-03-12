@@ -53,7 +53,7 @@ export default function SignupPage() {
           <form onSubmit={handleSubmit}>
             <div className='mb-2'>
               <label className="label">Role</label>
-              <User className="text-gray signup-user-icon" style={{ position: 'absolute', left: '50px', top: '36%', transform: 'translateY(-49%)', color:"#7c4dff" }} size={18} />
+              <User className="signup-user-icon" style={{ position: 'absolute', left: '50px', top: '36%', transform: 'translateY(-49%)', color:"#7c4dff" }} size={18} />
               <select className='options' value={role} onChange={(e) => setRole(e.target.value)} style={{ height: '35px', padding:'4px'}}>
                 <option value="user">User</option>
                 <option value="admin">Admin</option>

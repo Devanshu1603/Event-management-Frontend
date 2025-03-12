@@ -17,7 +17,7 @@ export default function EventCard({ event, onViewDetails, onAttend, userRole }) 
       <div className="event-card-content">
         {/* Event Title and Status */}
         <div className="card-detail flex-between mb-2">
-          <h3 className='gradient-text' style={{ fontSize: '1.25rem', fontWeight: '600' }}>{event.title}</h3>
+          <h3 className='gradient-text event-title' style={{ fontSize: '1.25rem', fontWeight: '600' }}>{event.title}</h3>
           <span className={`event-status ${statusClass}`}>{event.status}</span>
         </div>
 

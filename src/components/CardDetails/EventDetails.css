@@ -9,6 +9,15 @@
     z-index: 999; /* Make sure it's on top of the content */
   }
   
+  .event-status2{
+    padding-left: 10px ;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    margin: 0 ;
+    height: 30px;
+    border-radius: 20px;
+  }
+
   /* Event details modal */
   .event-details-modal {
     position: fixed;
@@ -25,6 +34,8 @@
     z-index: 1000; /* Ensure modal is on top of the backdrop */
     scrollbar-width: none;
   }
+
+  
 
   .event-details-modal .relative img{
     max-height: 350px;
@@ -56,11 +67,6 @@
   .card-detail-title-container{
     display: flex;
     justify-content: space-between;
-
-    span{
-        margin-top: 6px;
-    }
-
   }
 
   ul{
@@ -125,6 +131,7 @@
     .event-details-modal {
         width: 90%;
         height: 67%;
+        font-size: 13px !important;
     }
 
     .card-detail-title-container{
@@ -136,6 +143,13 @@
             margin-top: -4px;
         }
     }
+
+  .event-status2{
+    padding: 7px !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    font-size: 12px;
+  }
 
     .detail-item{
      span{

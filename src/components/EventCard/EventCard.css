@@ -4,9 +4,14 @@
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     max-width: 450px;
-    max-height: 520px;
+    
     width: 100%;
     color: #fff;
+  }
+
+  .event-title{
+    text-align: left;
+    width: 70%;
   }
   
   .event-card img {
@@ -25,6 +30,8 @@
     border-radius: 9999px;
     font-size: 0.875rem;
     font-weight: 500;
+    position: relative;
+    bottom: 20px;
   }
   
   .status-ongoing {
@@ -84,9 +91,15 @@
     }
   }
 
-  @media (max-width: 440px) {
+  @media (max-width: 540px) {
+
+    .event-status {
+      font-size: 0.6rem;
+    }
+
     .event-card{
       width: 87%;
+      font-size: 13px !important;
     }
 
     .event-card-content p{

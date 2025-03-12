@@ -30,6 +30,14 @@ input, select{
     color: #fff !important;
 }
 
+.login-user-icon{
+    position: absolute;
+    left: 50px;
+    top: 37.5%;
+    transform: translateY(-49%);
+    color: #7c4dff;
+}
+
 @media (max-width: 540px) {
     .login-container{
         font-size: 12px;
@@ -42,7 +50,7 @@ input, select{
         font-size: 13px;
     }
 
-    .user-icon{
+    .login-user-icon{
         position: absolute;
         top: 36.5% !important;
     }
@@ -58,7 +66,7 @@ input, select{
         font-size: 12px !important;
     } */
 
-    .user-icon{
+    .login-user-icon{
         position: absolute;
         top: 35% !important;
     }

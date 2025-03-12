@@ -52,7 +52,7 @@ export default function LoginPage() {
 
             <div className='mb-2'>
               <label className="label">Role</label>
-              <User className="text-gray user-icon" style={{ position: 'absolute', left: '50px', top: '37.5%', transform: 'translateY(-49%)', color:"#7c4dff" }} size={18} />
+              <User className="login-user-icon" size={18} />
               <select
                 value={role}
                 onChange={(e) => setRole(e.target.value)}

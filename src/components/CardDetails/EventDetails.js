@@ -47,10 +47,8 @@ export default function EventDetails({ event, onClose, onRegister }) {
                         <>
                             {/* Event Details */}
                             <div className="card-detail-title-container mb-3">
-                                <h3 className="card-detail-title gradient-text">{event.title}</h3>
-                                <span className={`event-status ${statusClass}`} style={{ height: '30px' }}>
-                                    {event.status.charAt(0).toUpperCase() + event.status.slice(1)}
-                                </span>
+                                <h3 className="card-detail-title gradient-text event-title">{event.title}</h3>
+                                <span className={`event-status2 ${statusClass}`}>{event.status}</span>
                             </div>
 
                             <div className="grid grid-cols-2 mb-4">
