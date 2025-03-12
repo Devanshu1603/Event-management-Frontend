@@ -45,7 +45,7 @@ export default function LoginPage() {
           <div className="flex-center mb-2">
             <Lock className="lock-icon" size={40} />
           </div>
-          <h2 className="text-center mb-4" style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>
+          <h2 className="text-center mb-4 gradient-text" style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>
             Sign in to your account
           </h2>
           <form onSubmit={handleSubmit}>

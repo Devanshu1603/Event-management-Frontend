@@ -47,14 +47,14 @@ export default function SignupPage() {
           <div className="flex-center mb-2">
             <User className="user-icon" size={35} />
           </div>
-          <h2 className="text-center mb-2" style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>
+          <h2 className="text-center mb-4 gradient-text" style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>
             Create your account
           </h2>
           <form onSubmit={handleSubmit}>
             <div className='mb-2'>
               <label className="label">Role</label>
-              <User className="text-gray" style={{ position: 'absolute', left: '50px', top: '34.5%', transform: 'translateY(-50%)', color: "#7c4dff" }} size={18} />
-              <select className='options' value={role} onChange={(e) => setRole(e.target.value)} style={{ height: '35px', fontSize: '0.875rem', textAlign: 'left' }}>
+              <User className="text-gray" style={{ position: 'absolute', left: '50px', top: '36%', transform: 'translateY(-49%)', color:"#7c4dff" }} size={18} />
+              <select className='options' value={role} onChange={(e) => setRole(e.target.value)} style={{ height: '35px', padding:'4px'}}>
                 <option value="user">User</option>
                 <option value="admin">Admin</option>
               </select>

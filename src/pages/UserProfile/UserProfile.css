@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-evenly;
     gap: 20px;
-    max-width: 100wh;
+    width: 100%;
     margin: auto;
   }
 
@@ -222,6 +222,18 @@
     position: relative;
     bottom: 8px;
   } */
+
+  .Preloader-container{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 150px;
+  }
+  .welcome-section-part2{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
   
   .save-button {
     margin-top: 20px;
@@ -229,6 +241,7 @@
 
   @media (max-width: 750px) {
     .profile-content{
+      width: 100% !important;
       display: flex;
       align-items: center !important;
       justify-content: center !important;
@@ -241,8 +254,9 @@
   }
 
   
-  @media (max-width: 430px) {
+  @media (max-width: 460px) {
     .profile-content{
+      width: 100%;
       display: flex;
       flex-direction: column;
     }
@@ -254,6 +268,13 @@
     .welcome-section{
       margin-top: 40px;
       width: 100%;
+    }
+    .profile-detail-btn{
+      font-size: 11px !important;
+    }
+    .stat-card{
+      font-size: 12px;
+      height: 130px;
     }
   }
 

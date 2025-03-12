@@ -93,6 +93,10 @@
       font-size: 22px;
     }
 
+    .attendence-container{
+      width: 80% !important;
+    }
+
   }
 
   .attendence-overlay {
@@ -110,7 +114,8 @@
   }
   
   .attendence-container {
-    background: rgba(255, 255, 255, 0.95);
+    background: #1e1e1e;
+    color: #fff;
     padding: 20px;
     border-radius: 10px;
     width: 30%;
@@ -122,7 +127,8 @@
     position: relative;
     top: 0;
     height: 10px;
-    background-color: #fff;
+    color: #fff;
+    background-color: #1e1e1e;
   }
 
   .attendence-heading{

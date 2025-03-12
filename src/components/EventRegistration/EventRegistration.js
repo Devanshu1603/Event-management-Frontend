@@ -72,8 +72,7 @@ export default function EventRegistration({ eventId }) {
             <div className="input-group">
               <input id="terms" type="checkbox" />
               <label id="term-text" htmlFor="terms">
-                I accept the terms and conditions for signing up to this service,
-                and hereby confirm I have read the privacy policy.
+                Please Enter the registered E-Mail Address for Registration in order to avoid mismatching !
               </label>
             </div>
           </div>

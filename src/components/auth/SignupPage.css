@@ -18,3 +18,9 @@
 .user-icon{
   color:#7c4dff;  
 }
+
+@media (max-width: 540px) {
+  .signup-container{
+      width: 90% !important;
+  }
+}

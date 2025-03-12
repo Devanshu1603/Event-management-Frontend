@@ -7,7 +7,6 @@ import Services from '../../components/Services/Services';
 import { Button } from 'react-bootstrap';
 import { Calendar, Zap } from 'lucide-react';
 import Main_Imag from '../../resources/Images/slider-img.png';
-import About_Imag from '../../resources/Images/about-img.png';
 
 export default function Home() {
   const [typedText, setTypedText] = useState('');

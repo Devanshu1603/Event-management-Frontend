@@ -24,3 +24,13 @@ input, select{
     padding-left: 37px !important;
     color: #fff !important;
 }
+
+.label{
+    color: #fff !important;
+}
+
+@media (max-width: 540px) {
+    .login-container{
+        width: 90% !important;
+    }
+}

@@ -8,6 +8,7 @@ import UserProfile from './pages/UserProfile/UserProfile';
 import EventRegistration from './components/EventRegistration/EventRegistration';
 import CustomNavbar from './components/Navbar/Navbar';
 import Home from './pages/Home/Home';
+import LandingPage from './components/LandingPage/LandingPage';
 import './styles/App.css';
 
 function App() {
@@ -33,6 +34,8 @@ function MainLayout() {
         <Route path="/user/dashboard" element={<UserDashboard />} />
         <Route path="/user/profile" element={<UserProfile />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/LandingPage" element={<LandingPage />} />
+
       </Routes>
     </>
   );

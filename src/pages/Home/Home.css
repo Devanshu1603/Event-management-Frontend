@@ -103,3 +103,9 @@
       display: none;
     }
   }
+
+  @media (max-width: 400px) {
+    .started-btn, .browse-btn{
+      font-size: 13px;
+    }
+  }

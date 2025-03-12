@@ -5,7 +5,7 @@
     transform: translate(-50%, -50%); /* Center the modal */
     max-width:350px;
     height: auto;
-    background-color: #f8f7f7;
+    background-color: #1e1e1e !important;
     border-radius: 7px;
 }
 

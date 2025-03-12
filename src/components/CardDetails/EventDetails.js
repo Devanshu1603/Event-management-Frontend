@@ -6,10 +6,10 @@ import EventRegistration from '../EventRegistration/EventRegistration';
 export default function EventDetails({ event, onClose, onRegister }) {
     const [showRegistration, setShowRegistration] = useState(false);
     const statusClass = event.status === 'ongoing'
-  ? 'status-ongoing'
-  : event.status === 'upcoming'
-  ? 'status-upcoming'
-  : 'status-completed';
+        ? 'status-ongoing'
+        : event.status === 'upcoming'
+            ? 'status-upcoming'
+            : 'status-completed';
     // const bkl = event._id;
     // console.log("bkl :- ", bkl);
 
@@ -100,12 +100,12 @@ export default function EventDetails({ event, onClose, onRegister }) {
                             </div>
 
                             <button
-  onClick={() => setShowRegistration(true)}
-  className="btn text-white py-3 px-4 rounded-md register-button d-flex align-items-center justify-content-center"
-  disabled={event.status === 'ongoing' || event.status === 'completed'}
->
-  Register for Event
-</button>
+                                onClick={() => setShowRegistration(true)}
+                                className="btn text-white py-3 px-4 rounded-md register-button d-flex align-items-center justify-content-center"
+                                disabled={event.status === 'ongoing' || event.status === 'completed'}
+                            >
+                                Register for Event
+                            </button>
 
                         </>
                     )}

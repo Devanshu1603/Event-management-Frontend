@@ -32,10 +32,21 @@
   .yellow-icon {
     color: var(--icon-venue);
   }
+  @media (max-width: 760px){
+    .services-card-container{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+   }
+
+  }
   @media (max-width: 540px){
     .services-card-container{
        display: flex;
        flex-direction: column;
        gap: 20px;
+    }
+    .service-detail-des{
+      font-size: 13px;
     }
   }

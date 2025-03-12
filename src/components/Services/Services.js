@@ -10,7 +10,7 @@ export default function Services() {
         <Card.Body>
           <CalendarCheck size={40} className="mb-3 red-icon" />
           <Card.Title className='mb-3'>Seamless Event Participation</Card.Title>
-          <Card.Text>Easily browse, register, and attend events with just a click. Stay updated with event details and never miss an opportunity !</Card.Text>
+          <Card.Text className='service-detail-des'>Easily browse, register, and attend events with just a click. Stay updated with event details and never miss an opportunity !</Card.Text>
         </Card.Body>
       </Card>
     </Col>
@@ -19,7 +19,7 @@ export default function Services() {
         <Card.Body>
           <ClipboardList size={40} className="mb-3 green-icon" />
           <Card.Title className='mb-3'> Effortless Event Management</Card.Title>
-          <Card.Text>Admins can create, edit, and manage events efficiently. Track registrations, update event details, and ensure smooth execution.</Card.Text>
+          <Card.Text className='service-detail-des'>Admins can create, edit, and manage events efficiently. Track registrations, update event details, and ensure smooth execution.</Card.Text>
         </Card.Body>
       </Card>
     </Col>
@@ -28,7 +28,7 @@ export default function Services() {
         <Card.Body>
           <BarChart size={40} className="mb-3 blue-icon" />
           <Card.Title className='mb-3'>Real-Time Event Tracking</Card.Title>
-          <Card.Text>Get real-time insights into event participation. Track attendees, manage schedules, and optimize event experiences effortlessly.</Card.Text>
+          <Card.Text className='service-detail-des'>Get real-time insights into event participation. Track attendees, manage schedules, and optimize event experiences effortlessly.</Card.Text>
         </Card.Body>
       </Card>
     </Col>
@@ -37,7 +37,7 @@ export default function Services() {
         <Card.Body>
           <Lock size={40} className="mb-3 yellow-icon" />
           <Card.Title className='mb-3'>Data Protection & Smooth Experience</Card.Title>
-          <Card.Text>We prioritize security and user experience. Enjoy a reliable platform with secure event management and attendee authentication.</Card.Text>
+          <Card.Text className='service-detail-des'>We prioritize security and user experience. Enjoy a reliable platform with secure event management and attendee authentication.</Card.Text>
         </Card.Body>
       </Card>
     </Col>
