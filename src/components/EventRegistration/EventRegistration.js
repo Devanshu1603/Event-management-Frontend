@@ -31,7 +31,7 @@ export default function EventRegistration({ eventId }) {
       );
 
       // Handle successful registration
-      alert("Registration successful!");
+      alert("Registration successful ! You will recieve a confirmational mail once the organiser approved you registration. Please check your registered E-Mail.");
 
       // Close details after a brief delay (e.g., 2 seconds)
         setShowDetails(false);
